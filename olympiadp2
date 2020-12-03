@@ -1,0 +1,9 @@
+dna = input()
+mks = 0
+
+for i in range(0, len(dna)):
+    if dna[i] == 'M' and i+2 < len(dna):
+        if dna[i+1] == 'K' and dna[i+2] == 'S':
+            mks += 1
+
+print(mks)
