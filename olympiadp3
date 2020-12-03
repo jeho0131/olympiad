@@ -1,0 +1,27 @@
+num = int(input())
+ns = 0
+cn = 0
+n = 0
+ln = [0 for i in range(10000)]
+lns = []
+add = 0
+
+for i in range(num * 2, num * 100, num):
+    n = i
+    cn = str(n)
+
+    for j in range(0, len(cn)):
+        ln[j] = cn[j]
+    lns = list(map(int,ln))
+    
+    for k in range(0, len(cn)):
+        add += lns[k]
+        
+    if add < ns or ns == 0:
+        ns = add
+        add = 0
+
+    else:
+        add = 0
+        
+print(ns)
