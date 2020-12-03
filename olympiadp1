@@ -1,0 +1,21 @@
+point = input().split()
+intpoint = list(map(int, point))
+
+big = 0
+small = 0
+add = 0
+
+for i in range(0,7):
+    if intpoint[big] < intpoint[i]:
+        big = i 
+    elif intpoint[i] < intpoint[small]:
+        small = i
+
+for j in range(0,7):
+    add += intpoint[j]
+print(add)
+add = add - intpoint[small] - intpoint[big]
+print(add)
+add = add / 5
+
+print('%.2f' % add)
