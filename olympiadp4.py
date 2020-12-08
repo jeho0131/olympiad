@@ -1,8 +1,8 @@
 x, num = map(int,input().split())
-cakeup = [0 for i in range(1000)]
 ax = 0
 bx = 0
-cake = [ [0] * 3 ] * 10000
+cake = [ [0] * 3 ] * num
+cakeup = [0 for i in range(x)]
 
 for i in range(0, num):
     cake[i] = list(map(int,input().split()))
@@ -14,4 +14,4 @@ for j in range(0, num):
         cakeup[k] += cake[j][2]
 
 for p in range(0, x):
-    print(cakeup[p],' ', end='')
+    print(cakeup[p], end='')
